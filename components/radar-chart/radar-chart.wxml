@@ -1,0 +1,3 @@
+<view class="radar-chart-container">
+  <f2-canvas id="radar-chart" canvas-id="radar-chart" opts="{{ opts }}" bindError="onError"></f2-canvas>
+</view> 

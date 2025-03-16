@@ -1,0 +1,120 @@
+/**
+ * 相守体检站 - 全局样式
+ */
+
+/* 全局样式 */
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+.container {
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+/* 标题样式 */
+.header {
+  text-align: center;
+  margin-bottom: 40rpx;
+}
+
+.header-title {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #4A90E2;
+  margin-bottom: 10rpx;
+}
+
+.header-subtitle {
+  font-size: 28rpx;
+  color: #666;
+}
+
+/* 按钮样式 */
+.btn {
+  padding: 20rpx 30rpx;
+  border-radius: 8rpx;
+  font-size: 30rpx;
+  text-align: center;
+  margin: 20rpx 0;
+}
+
+.btn-primary {
+  background-color: #4A90E2;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+/* 卡片样式 */
+.card {
+  background-color: white;
+  border-radius: 12rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+/* 信息框样式 */
+.info-box {
+  background-color: #e8f4fd;
+  border-radius: 8rpx;
+  padding: 20rpx;
+  margin: 20rpx 0;
+}
+
+.info-box-title {
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+/* 隐私提示样式 */
+.privacy-notice {
+  font-size: 24rpx;
+  color: #666;
+  margin: 30rpx 0;
+  text-align: center;
+}
+
+/* 导航按钮容器 */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40rpx;
+}
+
+/* 进度条样式 */
+.progress-container {
+  margin-bottom: 30rpx;
+}
+
+.progress-bar {
+  height: 16rpx;
+  background-color: #e9ecef;
+  border-radius: 8rpx;
+  overflow: hidden;
+  margin-bottom: 10rpx;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4A90E2;
+  border-radius: 8rpx;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 24rpx;
+  color: #666;
+  text-align: right;
+} 

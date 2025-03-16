@@ -1,0 +1,62 @@
+<view class="container">
+  <!-- 进度条 -->
+  <view class="progress-container">
+    <view class="progress-bar">
+      <view class="progress" style="width: {{progress}}%"></view>
+    </view>
+    <view class="progress-text">已完成: {{progress}}%</view>
+  </view>
+
+  <!-- 类别信息 -->
+  <view class="category-container card">
+    <view class="category-title">{{currentCategory.name}}</view>
+    <view class="category-description">{{currentCategory.description}}</view>
+
+    <!-- 跳过选项 -->
+    <view class="skip-option">
+      <checkbox-group bindchange="toggleSkipCategory">
+        <label class="checkbox-label">
+          <checkbox value="skip" checked="{{skipCategory}}" />
+          <text>此类别不适用于我（跳过）</text>
+        </label>
+      </checkbox-group>
+    </view>
+
+    <!-- 问题列表 -->
+    <view class="questions-container" hidden="{{skipCategory}}">
+      <block wx:for="{{questions}}" wx:key="id" wx:for-index="questionIndex">
+        <view class="question-item">
+          <view class="question-text">{{questionIndex + 1}}. {{item.text}}</view>
+          <view class="answer-options">
+            <view class="answer-scale">
+              <text class="scale-label">非常不同意</text>
+              <text class="scale-label">非常同意</text>
+            </view>
+            <view class="rating-container">
+              <view 
+                wx:for="{{[1, 2, 3, 4, 5]}}" 
+                wx:for-item="value" 
+                wx:key="*this" 
+                wx:for-index="valueIndex"
+                class="rating-item {{answers[questionIndex] === value ? 'active' : ''}}"
+                data-question-index="{{questionIndex}}"
+                data-value="{{value}}"
+                bindtap="selectAnswer"
+              >
+                {{value}}
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <!-- 导航按钮 -->
+    <view class="navigation-buttons">
+      <button class="btn btn-secondary" bindtap="prevCategory" disabled="{{currentCategoryIndex === 0}}">上一步</button>
+      <button class="btn btn-primary" bindtap="nextCategory">
+        {{currentCategoryIndex === app.globalData.categories.length - 1 ? '完成' : '下一步'}}
+      </button>
+    </view>
+  </view>
+</view> 

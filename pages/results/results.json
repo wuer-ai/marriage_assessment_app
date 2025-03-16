@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "评估结果",
+  "usingComponents": {
+    "radar-chart-simple": "../../components/radar-chart/radar-chart-simple"
+  }
+} 

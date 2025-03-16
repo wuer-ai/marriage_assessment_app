@@ -1,0 +1,258 @@
+/* 相守体检站 - 结果页面样式 */
+
+.container {
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.overall-score {
+  margin-bottom: 30rpx;
+}
+
+.score-header {
+  margin-bottom: 30rpx;
+}
+
+.score-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+.score-content {
+  display: flex;
+  align-items: center;
+}
+
+.score-circle {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-right: 30rpx;
+  flex-shrink: 0;
+}
+
+.score-value {
+  font-size: 48rpx;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.score-max {
+  font-size: 24rpx;
+  opacity: 0.8;
+}
+
+.score-details {
+  flex: 1;
+}
+
+.score-grade {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.score-description {
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.score-long-description {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 1.5;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  color: #333;
+}
+
+.radar-chart-wrapper {
+  height: 500rpx;
+  width: 100%;
+  margin-bottom: 60rpx;
+  position: relative;
+}
+
+.chart-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  border-radius: 8rpx;
+  color: #999;
+  font-size: 28rpx;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  margin-top: 30rpx;
+  margin-bottom: 40rpx;
+  position: relative;
+  z-index: 10;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin: 0 20rpx;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 4rpx 10rpx;
+  border-radius: 20rpx;
+}
+
+.legend-color {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  margin-right: 8rpx;
+}
+
+.legend-text {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.category-list {
+  margin-top: 50rpx;
+}
+
+.category-item {
+  margin-bottom: 30rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15rpx;
+}
+
+.category-name {
+  font-size: 30rpx;
+  font-weight: bold;
+  flex: 1;
+}
+
+.category-score-badge {
+  padding: 6rpx 16rpx;
+  border-radius: 30rpx;
+  color: white;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.category-bar-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15rpx;
+}
+
+.category-bar {
+  flex: 1;
+  height: 16rpx;
+  background-color: #f0f0f0;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+
+.category-progress {
+  height: 100%;
+  border-radius: 8rpx;
+}
+
+.category-score-indicator {
+  margin-left: 15rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  min-width: 40rpx;
+  text-align: center;
+}
+
+.category-details {
+  margin: 20rpx 0;
+  padding: 20rpx;
+  background-color: #f8f9fa;
+  border-radius: 8rpx;
+}
+
+.category-grade {
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+}
+
+.category-suggestion {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 1.5;
+}
+
+.category-toggle {
+  text-align: center;
+  color: #999;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 40rpx 0;
+  flex-wrap: wrap;
+}
+
+.action-buttons .btn {
+  width: 45%;
+}
+
+.action-buttons .btn-download {
+  flex-basis: 100%;
+}
+
+.btn {
+  padding: 20rpx 0;
+  border-radius: 8rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.btn-primary {
+  background-color: #4A90E2;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+.btn-download {
+  background-color: #8BC34A;
+  color: white;
+  margin-top: 20rpx;
+  width: 100%;
+} 

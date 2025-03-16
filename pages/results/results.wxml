@@ -1,0 +1,114 @@
+<view class="container">
+  <!-- 用于测试 F2 图表组件是否可用的隐藏元素 -->
+  <view style="display: none;">
+    <radar-chart id="f2-chart-test" chart-data="{{[{category:'测试',score:50}]}}"></radar-chart>
+  </view>
+  
+  <!-- 总体评分 -->
+  <view class="overall-score card">
+    <view class="score-header">
+      <view class="score-title">{{appConfig.resultPageTitle}}</view>
+    </view>
+    
+    <view class="score-content">
+      <view class="score-circle" style="background-color: {{totalGrade.color}}">
+        <view class="score-value">{{totalScore}}</view>
+        <view class="score-max">/100</view>
+      </view>
+      
+      <view class="score-details">
+        <view class="score-grade">总体评级: <text style="color: {{totalGrade.color}}">{{totalGrade.grade}}</text></view>
+        <view class="score-description">{{totalGrade.description}}</view>
+        <view class="score-long-description">{{totalGrade.longDescription}}</view>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 风险评估 -->
+  <view class="risk-assessment card" wx:if="{{showRisks}}">
+    <view class="section-title">{{appConfig.riskAssessmentTitle}}</view>
+    <view class="risk-description">以下是您关系中可能存在的风险因素，建议重点关注：</view>
+    
+    <view class="risk-list">
+      <block wx:for="{{risks}}" wx:key="categoryId">
+        <view class="risk-item risk-level-{{item.level}}">
+          <view class="risk-header">
+            <view class="risk-name">{{item.name}}</view>
+            <view class="risk-score">{{item.score}}分</view>
+          </view>
+          <view class="risk-content">
+            <view class="risk-description">{{item.description}}</view>
+            <view class="risk-suggestion">建议：{{item.suggestion}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  
+  <!-- 类别评分 -->
+  <view class="category-scores card">
+    <view class="section-title">{{appConfig.dimensionsTitle}}</view>
+    
+    <!-- 雷达图 -->
+    <view class="radar-chart-wrapper">
+      <!-- 数据为空时显示提示 -->
+      <view wx:if="{{!radarChartData || radarChartData.length === 0}}" class="chart-placeholder">
+        <text>暂无评分数据</text>
+      </view>
+      
+      <!-- 使用简单雷达图组件 -->
+      <radar-chart-simple wx:else chart-data="{{radarChartData}}" width="{{radarChartWidth}}" height="{{radarChartHeight}}"></radar-chart-simple>
+    </view>
+    
+    <!-- 图例说明 -->
+    <view class="chart-legend">
+      <view class="legend-item">
+        <view class="legend-color" style="background-color: #4A90E2;"></view>
+        <text class="legend-text">{{appConfig.legend.answered}}</text>
+      </view>
+      <view class="legend-item">
+        <view class="legend-color" style="background-color: #999999;"></view>
+        <text class="legend-text">{{appConfig.legend.skipped}}</text>
+      </view>
+    </view>
+    
+    <!-- 类别列表 -->
+    <view class="category-list">
+      <block wx:for="{{categories}}" wx:key="id">
+        <view class="category-item" bindtap="toggleCategory" data-id="{{item.id}}">
+          <view class="category-header">
+            <view class="category-name">{{item.name}}</view>
+            <view class="category-score-badge" style="background-color: {{categoryGrades[item.id].color}}">
+              {{categoryScores[item.id] || 0}}
+            </view>
+          </view>
+          
+          <view class="category-bar-container">
+            <view class="category-bar">
+              <view class="category-progress" style="width: {{categoryScores[item.id] || 0}}%; background-color: {{categoryGrades[item.id].color}}"></view>
+            </view>
+          </view>
+          
+          <view class="category-details" wx:if="{{expandedCategories[item.id]}}">
+            <view class="category-grade">评级: {{categoryGrades[item.id].grade}} ({{categoryGrades[item.id].description}})</view>
+            <view class="category-suggestion">{{categorySuggestions[item.id]}}</view>
+          </view>
+          
+          <view class="category-toggle">
+            <text class="toggle-icon">{{expandedCategories[item.id] ? '▲' : '▼'}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  
+  <!-- 操作按钮 -->
+  <view class="action-buttons">
+    <button class="btn btn-secondary" bindtap="shareResults">{{appConfig.buttons.shareResults}}</button>
+    <button class="btn btn-primary" bindtap="restartAssessment">{{appConfig.buttons.restartAssessment}}</button>
+    <button class="btn btn-download" bindtap="downloadResultImage">{{appConfig.buttons.downloadImage}}</button>
+  </view>
+  
+  <!-- 用于生成图片的画布（隐藏） -->
+  <canvas canvas-id="resultCanvas" style="width: {{canvasWidth}}px; height: {{canvasHeight}}px; position: fixed; left: -9999px; top: -9999px;"></canvas>
+</view> 

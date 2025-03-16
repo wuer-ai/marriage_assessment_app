@@ -1,0 +1,54 @@
+/* 相守体检站 - 首页样式 */
+
+.welcome-content {
+  padding: 20rpx 0;
+}
+
+.welcome-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  color: #333;
+}
+
+.welcome-text {
+  font-size: 30rpx;
+  line-height: 1.6;
+  margin-bottom: 30rpx;
+  color: #666;
+}
+
+.info-list {
+  margin: 20rpx 0;
+}
+
+.info-item {
+  font-size: 28rpx;
+  line-height: 1.8;
+  position: relative;
+  padding-left: 30rpx;
+}
+
+.info-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #4A90E2;
+}
+
+.iconfont {
+  margin-right: 10rpx;
+}
+
+.icon-info::before {
+  content: "ℹ️";
+}
+
+.icon-shield::before {
+  content: "🔒";
+}
+
+.btn-primary {
+  margin-top: 40rpx;
+  width: 100%;
+} 

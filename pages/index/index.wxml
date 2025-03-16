@@ -1,0 +1,35 @@
+<view class="container">
+  <!-- 页面标题 -->
+  <view class="header">
+    <view class="header-title">{{title}}</view>
+    <view class="header-subtitle">{{subtitle}}</view>
+  </view>
+
+  <!-- 主要内容区域 -->
+  <view class="welcome-content">
+    <view class="card">
+      <view class="welcome-title">欢迎使用相守体检站</view>
+      <view class="welcome-text">本系统将从多个维度评估您的关系状况，帮助您了解伴侣关系的优势和可能需要改进的地方。</view>
+      
+      <view class="info-box">
+        <view class="info-box-title">
+          <text class="iconfont icon-info"></text>
+          <text>使用说明</text>
+        </view>
+        <view class="info-list">
+          <view class="info-item">评估包含10个类别，每个类别3个问题</view>
+          <view class="info-item">请根据您的真实感受评分（1-5分）</view>
+          <view class="info-item">如果某些问题不适用（如无子女家庭），可跳过相关类别</view>
+          <view class="info-item">完成后将获得详细分析报告和个性化建议</view>
+        </view>
+      </view>
+      
+      <view class="privacy-notice">
+        <text class="iconfont icon-shield"></text>
+        <text>隐私保障：所有数据仅在您的设备中处理，不会上传或存储到任何服务器</text>
+      </view>
+      
+      <button class="btn btn-primary" bindtap="startAssessment">开始评估</button>
+    </view>
+  </view>
+</view> 
