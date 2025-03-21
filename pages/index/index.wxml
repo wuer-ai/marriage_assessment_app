@@ -8,7 +8,7 @@
   <!-- 主要内容区域 -->
   <view class="welcome-content">
     <view class="card">
-      <view class="welcome-title">欢迎使用相守体检站</view>
+      <view class="welcome-title">欢迎使用相守晴雨站</view>
       <view class="welcome-text">本系统将从多个维度评估您的关系状况，帮助您了解伴侣关系的优势和可能需要改进的地方。</view>
       
       <view class="info-box">

@@ -24,7 +24,7 @@ Page({
     showRisks: false, // 是否显示风险部分
     canvasWidth: 0, // 画布宽度
     canvasHeight: 0, // 画布高度
-    qrCodePath: '../../images/qrcode.png' // 小程序二维码路径
+    qrCodePath: '../../images/qrcode.jpg' // 小程序二维码路径
   },
 
   // 生命周期函数--监听页面加载

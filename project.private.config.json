@@ -3,5 +3,6 @@
   "projectname": "marriage_assessment_app",
   "setting": {
     "compileHotReLoad": true
-  }
+  },
+  "libVersion": "3.7.10"
 }
