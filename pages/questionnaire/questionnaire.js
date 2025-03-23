@@ -1,4 +1,4 @@
-// 相守体检站 - 问卷页面逻辑
+// 相守晴雨表 - 问卷页面逻辑
 
 const app = getApp();
 const appConfig = require('../../utils/config.js');

@@ -5,13 +5,13 @@
 
 const appConfig = {
   // 应用名称
-  appName: '相守晴雨站',
+  appName: '相守晴雨表',
   
   // 应用描述
   appDescription: '评估和改善伴侣关系的健康状况',
   
   // 分享信息
-  shareTitle: '我在相守晴雨站完成了关系评估，快来看看吧！',
+  shareTitle: '我在相守晴雨表完成了关系评估，快来看看吧！',
   
   // 结果页面标题
   resultPageTitle: '关系健康评估结果',
